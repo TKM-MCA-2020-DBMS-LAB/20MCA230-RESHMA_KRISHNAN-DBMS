@@ -1,0 +1,39 @@
+ MySQL  organization  SQL > use organization
+Default schema set to `organization`.
+Fetching table and column names from `organization` for auto-completion... Press ^C to stop.
+ MySQL  organization  SQL > select * from Employee;
++--------+----------+------------+------------------+--------------+------------+---------+--------+
+| Emp_no | Emp_name | DOB        | Address          | Date_of_Join | Mobile_no  | Dept_no | Salary |
++--------+----------+------------+------------------+--------------+------------+---------+--------+
+|      1 | Maneesh  | 1994-08-12 | Kollam           | 2020-05-06   | 9633019940 |       3 |  35000 |
+|      2 | Arya     | 1999-11-12 | Thiruvanthapuram | 2021-01-08   | 9895673412 |       2 |   8500 |
+|      3 | Vishnu   | 1994-10-15 | Kollam           | 2018-11-15   | 9746568910 |       4 |  40000 |
+|      4 | Vivek    | 1992-10-19 | Kollam           | 2018-11-20   | 9746563456 |       1 |  40000 |
+|      5 | Sandra   | 1970-08-12 | Venjarummood     | 2021-02-14   | 9633789600 |       9 |  10000 |
+|      6 | Firoz    | 1971-11-12 | Thiruvanthapuram | 2021-02-14   | 9895677812 |       2 |   8500 |
+|      7 | Rakhi    | 1984-10-15 | Kasaragod        | 2021-02-15   | 9756768910 |       9 |   8500 |
+|      8 | Anand    | 2000-10-19 | Calicut          | 2021-02-14   | 9746589456 |       2 |  10000 |
+|      9 | Akshay   | 1989-10-19 | Mundakkayam      | 2021-02-14   | 9746989456 |       8 |  10000 |
++--------+----------+------------+------------------+--------------+------------+---------+--------+
+9 rows in set (0.0011 sec)
+ MySQL  organization  SQL > select distinct '9' as Dept_No, Emp_Data(9) as No_of_Employees from Employee;
++---------+-----------------+
+| Dept_No | No_of_Employees |
++---------+-----------------+
+| 9       |               2 |
++---------+-----------------+
+1 row in set (0.0011 sec)
+ MySQL  organization  SQL > select distinct '3' as Dept_No, Emp_Data(3) as No_of_Employees from Employee;
++---------+-----------------+
+| Dept_No | No_of_Employees |
++---------+-----------------+
+| 3       |               1 |
++---------+-----------------+
+1 row in set (0.0013 sec)
+ MySQL  organization  SQL > select distinct '2' as Dept_No, Emp_Data(2) as No_of_Employees from Employee;
++---------+-----------------+
+| Dept_No | No_of_Employees |
++---------+-----------------+
+| 2       |               3 |
++---------+-----------------+
+1 row in set (0.0010 sec)
